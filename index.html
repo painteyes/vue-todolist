@@ -25,23 +25,15 @@
 
         <!-- Filters -->
         <div class="add-todo-filter">
-            <input type="text" name="" id="" placeholder="">
-            <button>Aggiungi</button>
+            <input type="text" name="" id="" placeholder="New todo" v-model='newTodoText'>
+            <button @click='addNewTodo()'>Aggiungi</button>
         </div>
 
         <!-- Todo list -->
         <div class="todos">
             <ul>
-                <li>
-                    <span>Fare a</span>
-                    <i class="fas fa-dumpster"></i>
-                </li>
-                <li>
-                    <span>Fare b</span>
-                    <i class="fas fa-dumpster"></i>
-                </li>
-                <li>
-                    <span>Fare c</span>
+                <li v-for='element in todos' class="done">                    
+                    <span>{{element.text}}</span>
                     <i class="fas fa-dumpster"></i>
                 </li>
             </ul>

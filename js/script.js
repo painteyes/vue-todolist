@@ -1,25 +1,35 @@
 Vue.config.devtools = true;
 
-const app = new Vue (
+const app = new Vue(
     {
         el: '#root',
         data:{
+            newTodoText:'',
             todos: [
             {
-               text: 'Fare a', 
+               text: 'Fare x', 
                display: true,
             }, 
             {
-                text: 'Fare b', 
+                text: 'Fare y', 
                 display: true,
             },
             {
-                text: 'Fare c', 
+                text: 'Fare z', 
                 display: true,
             }
-        ], 
+        ]
+        }, 
         methods: {
-
+            addNewTodo: function () {
+                this.todos.push(
+                    {
+                        text: this.newTodoText,
+                        display: true,
+                    }
+                );
+                this.newTodoText ='';
+            }
         }
     }
 );
