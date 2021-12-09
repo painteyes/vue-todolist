@@ -8,31 +8,38 @@ const app = new Vue(
             todos: [
             {
                text: 'Fare x', 
-               display: true,
+               done: false,
             }, 
             {
                 text: 'Fare y', 
-                display: true,
+                done: false,
             },
             {
                 text: 'Fare z', 
-                display: true,
+                done: false,
             }
         ]
         }, 
         methods: {
             addNewTodo: function () {
-                this.todos.push(
-                    {
-                        text: this.newTodoText,
-                        display: true,
-                    }
-                );
+
+                if (this.newTodoText.trim() !== '') {
+                    this.todos.unshift(
+                        {
+                            text: this.newTodoText.trim(),
+                            done: false,
+                        }
+                    );
+                }   
+
                 this.newTodoText ='';
             },
             deleteTodo: function(index) {
                 this.todos.splice(index, 1)
-            }
+            },
+            completeTodo: function(index) {
+                this.todos[index].done = !this.todos[index].done;
+            },
         }
     }
 );

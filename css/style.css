@@ -38,15 +38,19 @@ header {
     list-style-type: none;
     border-bottom: 1px solid black;
     padding: 15px 0 5px;
-    
 }
-.todos li.done {
+.todos li.done span {
     text-decoration: line-through;
 }
 .todos li:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
-.todos i {
+.todos .fa-dumpster {
     float: right;
     padding-right: 10px;
+    cursor: pointer;
+}
+.todos .checkbox {
+    display: inline-block;
+    cursor: pointer;
 }
