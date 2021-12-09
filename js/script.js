@@ -1,5 +1,25 @@
 Vue.config.devtools = true;
 
-new Vue = {
-    
-}
+const app = new Vue (
+    {
+        el: '#root',
+        data:{
+            todos: [
+            {
+               text: 'Fare a', 
+               display: true,
+            }, 
+            {
+                text: 'Fare b', 
+                display: true,
+            },
+            {
+                text: 'Fare c', 
+                display: true,
+            }
+        ], 
+        methods: {
+
+        }
+    }
+);
