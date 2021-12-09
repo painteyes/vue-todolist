@@ -32,9 +32,9 @@
         <!-- Todo list -->
         <div class="todos">
             <ul>
-                <li v-for='element in todos' class="done">                    
+                <li v-for='element, index in todos' class="done">                    
                     <span>{{element.text}}</span>
-                    <i class="fas fa-dumpster"></i>
+                    <i @click='deleteTodo(index)' class="fas fa-dumpster"></i>
                 </li>
             </ul>
         </div>
