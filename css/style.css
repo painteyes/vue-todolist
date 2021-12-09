@@ -19,3 +19,29 @@ header {
 }
 
 /* MAIN */
+/* Filters */
+.add-todo-filter {
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* Todos */
+.todos {
+    width: 70%;
+    background-color: lightgrey;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+.todos li {
+    list-style-type: none;
+    border-bottom: 1px solid black;
+    padding: 20px 0 10px;
+}
+.todos li:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.todos i {
+    float: right;
+}
